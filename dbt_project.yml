@@ -1,0 +1,23 @@
+name: build_mau
+version: 1.0
+config-version: 2
+profile: build_mau
+require-dbt-version: ">=1.10.0,<2.0.0"
+
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  build_mau:
+    +materialized: view
+    input:
+      +materialized: view        
+    output:
+      +materialized: table

@@ -1,0 +1,1 @@
+{{ test_unique(column_name="SESSIONID", model=get_where_subquery(ref('session_summary'))) }}
