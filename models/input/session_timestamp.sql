@@ -3,5 +3,6 @@ with session_timestamp as (
         sessionId,
         ts
     from {{ source('raw','session_timestamp') }}
+    WHERE sessionId IS NOT NULL
 )
 select * from session_timestamp
