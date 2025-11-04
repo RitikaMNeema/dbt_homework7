@@ -1260,3 +1260,463 @@ having count(*) > 1
 [0m21:24:43.990748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11af734a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a2a6030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1531e6330>]}
 [0m21:24:43.990961 [debug] [MainThread]: Flushing usage events
 [0m21:24:44.383250 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:23.273706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11181acc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111990590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f732c0>]}
+
+
+============================== 21:51:23.279676 | 0c328274-8fe9-47e9-a81c-f428e4c5810e ==============================
+[0m21:51:23.279676 [info ] [MainThread]: Running with dbt=1.11.0-b3
+[0m21:51:23.279948 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'write_json': 'True', 'target_path': 'None', 'warn_error': 'None', 'log_path': '/Users/ritika.mac/Documents/GitHub/dbt_homework7/logs', 'profiles_dir': '/Users/ritika.mac/.dbt', 'log_format': 'default', 'indirect_selection': 'eager', 'no_print': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'partial_parse': 'True', 'empty': 'False', 'use_colors': 'True', 'quiet': 'False', 'static_parser': 'True', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'introspect': 'True'}
+[0m21:51:24.044332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15adb0fe0>]}
+[0m21:51:24.065101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x159fffa40>]}
+[0m21:51:24.065603 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m21:51:24.121991 [debug] [MainThread]: checksum: e63134dccc1251cfb572caf0e4aa952f030c125ee3634f3bf2c0a2e1bb6ae349, vars: {}, profile: , target: , version: 1.11.0b3
+[0m21:51:24.229778 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m21:51:24.230104 [debug] [MainThread]: Partial parsing: updated file: build_mau://models/input/session_timestamp.sql
+[0m21:51:24.230254 [debug] [MainThread]: Partial parsing: updated file: build_mau://models/input/user_session_channel.sql
+[0m21:51:24.335299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b95d4f0>]}
+[0m21:51:24.370992 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:51:24.372328 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:51:24.385944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b890dd0>]}
+[0m21:51:24.386139 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 492 macros
+[0m21:51:24.386279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15bba65a0>]}
+[0m21:51:24.386904 [info ] [MainThread]: 
+[0m21:51:24.387033 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:24.387134 [info ] [MainThread]: 
+[0m21:51:24.387310 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:51:24.388884 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_LEMUR'
+[0m21:51:24.450336 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR"
+[0m21:51:24.450564 [debug] [ThreadPool]: On list_USER_DB_LEMUR: show terse schemas in database USER_DB_LEMUR
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR"} */
+[0m21:51:24.450678 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:28.514201 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 4.063 seconds
+[0m21:51:28.518378 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR, now list_USER_DB_LEMUR_SNAPSHOT)
+[0m21:51:28.533927 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_SNAPSHOT"
+[0m21:51:28.534439 [debug] [ThreadPool]: On list_USER_DB_LEMUR_SNAPSHOT: show objects in USER_DB_LEMUR.SNAPSHOT
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_SNAPSHOT"} */;
+[0m21:51:28.954583 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.419 seconds
+[0m21:51:28.958115 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_SNAPSHOT, now list_USER_DB_LEMUR_analytics)
+[0m21:51:28.962215 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_analytics"
+[0m21:51:28.962621 [debug] [ThreadPool]: On list_USER_DB_LEMUR_analytics: show objects in USER_DB_LEMUR.analytics
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_analytics"} */;
+[0m21:51:29.292790 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.330 seconds
+[0m21:51:29.295087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b9b1f40>]}
+[0m21:51:29.298026 [debug] [Thread-1 (]: Began running node model.build_mau.session_timestamp
+[0m21:51:29.298389 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics.session_timestamp ........................ [RUN]
+[0m21:51:29.298668 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_analytics, now model.build_mau.session_timestamp)
+[0m21:51:29.298871 [debug] [Thread-1 (]: Began compiling node model.build_mau.session_timestamp
+[0m21:51:29.302822 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.session_timestamp"
+[0m21:51:29.303419 [debug] [Thread-1 (]: Began executing node model.build_mau.session_timestamp
+[0m21:51:29.320006 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.session_timestamp"
+[0m21:51:29.320864 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.session_timestamp"
+[0m21:51:29.321057 [debug] [Thread-1 (]: On model.build_mau.session_timestamp: create or replace   view USER_DB_LEMUR.analytics.session_timestamp
+  
+  
+  
+  
+  as (
+    with session_timestamp as (
+    select
+        sessionId,
+        ts
+    from USER_DB_LEMUR.raw.session_timestamp
+)
+select * from session_timestamp
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.session_timestamp"} */;
+[0m21:51:29.629322 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c028df-0106-ddf1-000f-c0df006acbf2
+[0m21:51:29.630069 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 14 at position 146 unexpected ';'.
+[0m21:51:29.635528 [debug] [Thread-1 (]: Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql
+[0m21:51:29.639661 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110f322d0>]}
+[0m21:51:29.640732 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model analytics.session_timestamp ............... [[31mERROR[0m in 0.34s]
+[0m21:51:29.641541 [debug] [Thread-1 (]: Finished running node model.build_mau.session_timestamp
+[0m21:51:29.641997 [debug] [Thread-1 (]: Began running node model.build_mau.user_session_channel
+[0m21:51:29.642481 [debug] [Thread-4 (]: Marking all children of 'model.build_mau.session_timestamp' to be skipped because of status 'error'.  Reason: Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql.
+[0m21:51:29.643050 [info ] [Thread-1 (]: 2 of 3 START sql view model analytics.user_session_channel ..................... [RUN]
+[0m21:51:29.644670 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.build_mau.session_timestamp, now model.build_mau.user_session_channel)
+[0m21:51:29.645061 [debug] [Thread-1 (]: Began compiling node model.build_mau.user_session_channel
+[0m21:51:29.648384 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.user_session_channel"
+[0m21:51:29.649077 [debug] [Thread-1 (]: Began executing node model.build_mau.user_session_channel
+[0m21:51:29.652448 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.user_session_channel"
+[0m21:51:29.654110 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.user_session_channel"
+[0m21:51:29.654457 [debug] [Thread-1 (]: On model.build_mau.user_session_channel: create or replace   view USER_DB_LEMUR.analytics.user_session_channel
+  
+  
+  
+  
+  as (
+    with user_session_channel as (
+    select
+        userId,
+        sessionId,
+        channel
+    from USER_DB_LEMUR.raw.user_session_channel
+)
+select * from user_session_channel
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.user_session_channel"} */;
+[0m21:51:30.141490 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c028df-0106-e10a-000f-c0df006a8dd2
+[0m21:51:30.142253 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 15 at position 149 unexpected ';'.
+[0m21:51:30.148328 [debug] [Thread-1 (]: Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql
+[0m21:51:30.149693 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0c328274-8fe9-47e9-a81c-f428e4c5810e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x163532690>]}
+[0m21:51:30.150800 [error] [Thread-1 (]: 2 of 3 ERROR creating sql view model analytics.user_session_channel ............ [[31mERROR[0m in 0.50s]
+[0m21:51:30.151802 [debug] [Thread-1 (]: Finished running node model.build_mau.user_session_channel
+[0m21:51:30.152535 [debug] [Thread-4 (]: Marking all children of 'model.build_mau.user_session_channel' to be skipped because of status 'error'.  Reason: Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql.
+[0m21:51:30.153933 [debug] [Thread-1 (]: Began running node model.build_mau.session_summary
+[0m21:51:30.154957 [info ] [Thread-1 (]: 3 of 3 SKIP relation analytics.session_summary ................................. [[33mSKIP[0m]
+[0m21:51:30.155483 [debug] [Thread-1 (]: Finished running node model.build_mau.session_summary
+[0m21:51:30.157150 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:30.157880 [debug] [MainThread]: Connection 'model.build_mau.user_session_channel' was left open.
+[0m21:51:30.158463 [debug] [MainThread]: On model.build_mau.user_session_channel: Close
+[0m21:51:30.777242 [info ] [MainThread]: 
+[0m21:51:30.778210 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.39 seconds (6.39s).
+[0m21:51:30.779341 [debug] [MainThread]: Command end result
+[0m21:51:30.804849 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:51:30.806422 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:51:30.811818 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/run_results.json
+[0m21:51:30.812321 [info ] [MainThread]: 
+[0m21:51:30.812729 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m21:51:30.812973 [info ] [MainThread]: 
+[0m21:51:30.813237 [error] [MainThread]: [31mFailure in model session_timestamp (models/input/session_timestamp.sql)[0m
+[0m21:51:30.813447 [error] [MainThread]:   Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql
+[0m21:51:30.813603 [info ] [MainThread]: 
+[0m21:51:30.813776 [info ] [MainThread]:   compiled code at target/compiled/build_mau/models/input/session_timestamp.sql
+[0m21:51:30.813931 [info ] [MainThread]: 
+[0m21:51:30.814176 [error] [MainThread]: [31mFailure in model user_session_channel (models/input/user_session_channel.sql)[0m
+[0m21:51:30.814528 [error] [MainThread]:   Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql
+[0m21:51:30.814756 [info ] [MainThread]: 
+[0m21:51:30.814956 [info ] [MainThread]:   compiled code at target/compiled/build_mau/models/input/user_session_channel.sql
+[0m21:51:30.815123 [info ] [MainThread]: 
+[0m21:51:30.815311 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=1 NO-OP=0 TOTAL=3
+[0m21:51:30.820472 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.5769105, "process_in_blocks": "0", "process_kernel_time": 1.542315, "process_mem_max_rss": "243367936", "process_out_blocks": "0", "process_user_time": 2.791635}
+[0m21:51:30.821455 [debug] [MainThread]: Command `dbt run` failed at 21:51:30.821277 after 7.58 seconds
+[0m21:51:30.821774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f733e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15b492510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15af6db20>]}
+[0m21:51:30.822110 [debug] [MainThread]: Flushing usage events
+[0m21:51:31.238839 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:59.025485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c82f00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e47560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e47290>]}
+
+
+============================== 21:51:59.028455 | 4bc12387-3ac0-4881-99c1-f1b3bda90b6d ==============================
+[0m21:51:59.028455 [info ] [MainThread]: Running with dbt=1.11.0-b3
+[0m21:51:59.028705 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'empty': 'False', 'static_parser': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/ritika.mac/.dbt', 'no_print': 'None', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'log_path': '/Users/ritika.mac/Documents/GitHub/dbt_homework7/logs', 'quiet': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'use_colors': 'True'}
+[0m21:51:59.643117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14a45d160>]}
+[0m21:51:59.664474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107945160>]}
+[0m21:51:59.665460 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m21:51:59.723877 [debug] [MainThread]: checksum: e63134dccc1251cfb572caf0e4aa952f030c125ee3634f3bf2c0a2e1bb6ae349, vars: {}, profile: , target: , version: 1.11.0b3
+[0m21:51:59.831015 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:59.831208 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:59.851977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14bd74980>]}
+[0m21:51:59.886714 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:51:59.887559 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:51:59.896801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14bd74da0>]}
+[0m21:51:59.897002 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 492 macros
+[0m21:51:59.897136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14bb19850>]}
+[0m21:51:59.897793 [info ] [MainThread]: 
+[0m21:51:59.897925 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:59.898028 [info ] [MainThread]: 
+[0m21:51:59.898203 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:51:59.899796 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_LEMUR'
+[0m21:51:59.925386 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR"
+[0m21:51:59.925576 [debug] [ThreadPool]: On list_USER_DB_LEMUR: show terse schemas in database USER_DB_LEMUR
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR"} */
+[0m21:51:59.925683 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:52:02.576425 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.651 seconds
+[0m21:52:02.580728 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR, now list_USER_DB_LEMUR_SNAPSHOT)
+[0m21:52:02.599756 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_SNAPSHOT"
+[0m21:52:02.600331 [debug] [ThreadPool]: On list_USER_DB_LEMUR_SNAPSHOT: show objects in USER_DB_LEMUR.SNAPSHOT
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_SNAPSHOT"} */;
+[0m21:52:02.809255 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.208 seconds
+[0m21:52:02.812887 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_SNAPSHOT, now list_USER_DB_LEMUR_analytics)
+[0m21:52:02.817493 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_analytics"
+[0m21:52:02.818592 [debug] [ThreadPool]: On list_USER_DB_LEMUR_analytics: show objects in USER_DB_LEMUR.analytics
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_analytics"} */;
+[0m21:52:03.240192 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.421 seconds
+[0m21:52:03.245548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14a2c29f0>]}
+[0m21:52:03.249902 [debug] [Thread-1 (]: Began running node model.build_mau.session_timestamp
+[0m21:52:03.251226 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics.session_timestamp ........................ [RUN]
+[0m21:52:03.252714 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_analytics, now model.build_mau.session_timestamp)
+[0m21:52:03.253358 [debug] [Thread-1 (]: Began compiling node model.build_mau.session_timestamp
+[0m21:52:03.262161 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.session_timestamp"
+[0m21:52:03.263212 [debug] [Thread-1 (]: Began executing node model.build_mau.session_timestamp
+[0m21:52:03.284522 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.session_timestamp"
+[0m21:52:03.285321 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.session_timestamp"
+[0m21:52:03.285529 [debug] [Thread-1 (]: On model.build_mau.session_timestamp: create or replace   view USER_DB_LEMUR.analytics.session_timestamp
+  
+  
+  
+  
+  as (
+    with session_timestamp as (
+    select
+        sessionId,
+        ts
+    from USER_DB_LEMUR.raw.session_timestamp
+)
+select * from session_timestamp
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.session_timestamp"} */;
+[0m21:52:03.435479 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c028e0-0106-e1dc-000f-c0df006af6de
+[0m21:52:03.436280 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 14 at position 146 unexpected ';'.
+[0m21:52:03.441675 [debug] [Thread-1 (]: Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql
+[0m21:52:03.444625 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14bb19ee0>]}
+[0m21:52:03.445496 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model analytics.session_timestamp ............... [[31mERROR[0m in 0.19s]
+[0m21:52:03.446069 [debug] [Thread-1 (]: Finished running node model.build_mau.session_timestamp
+[0m21:52:03.446656 [debug] [Thread-1 (]: Began running node model.build_mau.user_session_channel
+[0m21:52:03.447085 [debug] [Thread-4 (]: Marking all children of 'model.build_mau.session_timestamp' to be skipped because of status 'error'.  Reason: Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql.
+[0m21:52:03.447641 [info ] [Thread-1 (]: 2 of 3 START sql view model analytics.user_session_channel ..................... [RUN]
+[0m21:52:03.449674 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.build_mau.session_timestamp, now model.build_mau.user_session_channel)
+[0m21:52:03.450194 [debug] [Thread-1 (]: Began compiling node model.build_mau.user_session_channel
+[0m21:52:03.453699 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.user_session_channel"
+[0m21:52:03.454500 [debug] [Thread-1 (]: Began executing node model.build_mau.user_session_channel
+[0m21:52:03.457099 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.user_session_channel"
+[0m21:52:03.458431 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.user_session_channel"
+[0m21:52:03.458770 [debug] [Thread-1 (]: On model.build_mau.user_session_channel: create or replace   view USER_DB_LEMUR.analytics.user_session_channel
+  
+  
+  
+  
+  as (
+    with user_session_channel as (
+    select
+        userId,
+        sessionId,
+        channel
+    from USER_DB_LEMUR.raw.user_session_channel
+)
+select * from user_session_channel
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.user_session_channel"} */;
+[0m21:52:03.532602 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c028e0-0106-e1eb-000f-c0df006b1636
+[0m21:52:03.533288 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 15 at position 149 unexpected ';'.
+[0m21:52:03.537649 [debug] [Thread-1 (]: Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql
+[0m21:52:03.538692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4bc12387-3ac0-4881-99c1-f1b3bda90b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14fcd1af0>]}
+[0m21:52:03.539609 [error] [Thread-1 (]: 2 of 3 ERROR creating sql view model analytics.user_session_channel ............ [[31mERROR[0m in 0.09s]
+[0m21:52:03.540272 [debug] [Thread-1 (]: Finished running node model.build_mau.user_session_channel
+[0m21:52:03.540819 [debug] [Thread-4 (]: Marking all children of 'model.build_mau.user_session_channel' to be skipped because of status 'error'.  Reason: Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql.
+[0m21:52:03.542150 [debug] [Thread-1 (]: Began running node model.build_mau.session_summary
+[0m21:52:03.542771 [info ] [Thread-1 (]: 3 of 3 SKIP relation analytics.session_summary ................................. [[33mSKIP[0m]
+[0m21:52:03.543189 [debug] [Thread-1 (]: Finished running node model.build_mau.session_summary
+[0m21:52:03.544284 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:52:03.544719 [debug] [MainThread]: Connection 'model.build_mau.user_session_channel' was left open.
+[0m21:52:03.545033 [debug] [MainThread]: On model.build_mau.user_session_channel: Close
+[0m21:52:03.685090 [info ] [MainThread]: 
+[0m21:52:03.686358 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 3.79 seconds (3.79s).
+[0m21:52:03.688096 [debug] [MainThread]: Command end result
+[0m21:52:03.713377 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:52:03.715451 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:52:03.719811 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/run_results.json
+[0m21:52:03.720016 [info ] [MainThread]: 
+[0m21:52:03.720264 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m21:52:03.720435 [info ] [MainThread]: 
+[0m21:52:03.720667 [error] [MainThread]: [31mFailure in model session_timestamp (models/input/session_timestamp.sql)[0m
+[0m21:52:03.720862 [error] [MainThread]:   Database Error in model session_timestamp (models/input/session_timestamp.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 14 at position 146 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/session_timestamp.sql
+[0m21:52:03.721008 [info ] [MainThread]: 
+[0m21:52:03.721185 [info ] [MainThread]:   compiled code at target/compiled/build_mau/models/input/session_timestamp.sql
+[0m21:52:03.721337 [info ] [MainThread]: 
+[0m21:52:03.721507 [error] [MainThread]: [31mFailure in model user_session_channel (models/input/user_session_channel.sql)[0m
+[0m21:52:03.721677 [error] [MainThread]:   Database Error in model user_session_channel (models/input/user_session_channel.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 15 at position 149 unexpected ';'.
+  compiled code at target/run/build_mau/models/input/user_session_channel.sql
+[0m21:52:03.721837 [info ] [MainThread]: 
+[0m21:52:03.722002 [info ] [MainThread]:   compiled code at target/compiled/build_mau/models/input/user_session_channel.sql
+[0m21:52:03.722142 [info ] [MainThread]: 
+[0m21:52:03.722322 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=1 NO-OP=0 TOTAL=3
+[0m21:52:03.726545 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.728063, "process_in_blocks": "0", "process_kernel_time": 1.792762, "process_mem_max_rss": "237453312", "process_out_blocks": "0", "process_user_time": 2.164002}
+[0m21:52:03.726873 [debug] [MainThread]: Command `dbt run` failed at 21:52:03.726824 after 4.73 seconds
+[0m21:52:03.727108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108df0140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e7a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108130410>]}
+[0m21:52:03.727446 [debug] [MainThread]: Flushing usage events
+[0m21:52:04.788060 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:52:20.045253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105629760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6f6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6f470>]}
+
+
+============================== 21:52:20.048873 | 985fe958-e259-4ce6-80ca-a60546da1bd7 ==============================
+[0m21:52:20.048873 [info ] [MainThread]: Running with dbt=1.11.0-b3
+[0m21:52:20.049165 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'printer_width': '80', 'log_cache_events': 'False', 'profiles_dir': '/Users/ritika.mac/.dbt', 'fail_fast': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'write_json': 'True', 'static_parser': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_path': '/Users/ritika.mac/Documents/GitHub/dbt_homework7/logs', 'target_path': 'None', 'invocation_command': 'dbt run', 'version_check': 'True', 'introspect': 'True', 'empty': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False'}
+[0m21:52:20.629809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f21dc0>]}
+[0m21:52:20.650416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff93da0>]}
+[0m21:52:20.651052 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m21:52:20.705154 [debug] [MainThread]: checksum: e63134dccc1251cfb572caf0e4aa952f030c125ee3634f3bf2c0a2e1bb6ae349, vars: {}, profile: , target: , version: 1.11.0b3
+[0m21:52:20.809639 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m21:52:20.809944 [debug] [MainThread]: Partial parsing: updated file: build_mau://models/input/session_timestamp.sql
+[0m21:52:20.810081 [debug] [MainThread]: Partial parsing: updated file: build_mau://models/input/user_session_channel.sql
+[0m21:52:20.912139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x164460d10>]}
+[0m21:52:20.946349 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:52:20.947722 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:52:20.957125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x164390860>]}
+[0m21:52:20.957320 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 492 macros
+[0m21:52:20.957455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x164577140>]}
+[0m21:52:20.958101 [info ] [MainThread]: 
+[0m21:52:20.958233 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:52:20.958332 [info ] [MainThread]: 
+[0m21:52:20.958512 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:52:20.960069 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_USER_DB_LEMUR'
+[0m21:52:20.985134 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR"
+[0m21:52:20.985349 [debug] [ThreadPool]: On list_USER_DB_LEMUR: show terse schemas in database USER_DB_LEMUR
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR"} */
+[0m21:52:20.985458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:52:21.929442 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.944 seconds
+[0m21:52:21.933902 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR, now list_USER_DB_LEMUR_analytics)
+[0m21:52:21.950335 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_analytics"
+[0m21:52:21.950887 [debug] [ThreadPool]: On list_USER_DB_LEMUR_analytics: show objects in USER_DB_LEMUR.analytics
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_analytics"} */;
+[0m21:52:22.107165 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.156 seconds
+[0m21:52:22.110768 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_analytics, now list_USER_DB_LEMUR_SNAPSHOT)
+[0m21:52:22.117609 [debug] [ThreadPool]: Using snowflake connection "list_USER_DB_LEMUR_SNAPSHOT"
+[0m21:52:22.118596 [debug] [ThreadPool]: On list_USER_DB_LEMUR_SNAPSHOT: show objects in USER_DB_LEMUR.SNAPSHOT
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_USER_DB_LEMUR_SNAPSHOT"} */;
+[0m21:52:22.219803 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.100 seconds
+[0m21:52:22.221817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16413e480>]}
+[0m21:52:22.225085 [debug] [Thread-1 (]: Began running node model.build_mau.session_timestamp
+[0m21:52:22.225633 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics.session_timestamp ........................ [RUN]
+[0m21:52:22.226043 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_USER_DB_LEMUR_SNAPSHOT, now model.build_mau.session_timestamp)
+[0m21:52:22.226267 [debug] [Thread-1 (]: Began compiling node model.build_mau.session_timestamp
+[0m21:52:22.230819 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.session_timestamp"
+[0m21:52:22.231328 [debug] [Thread-1 (]: Began executing node model.build_mau.session_timestamp
+[0m21:52:22.247095 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.session_timestamp"
+[0m21:52:22.248614 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.session_timestamp"
+[0m21:52:22.248841 [debug] [Thread-1 (]: On model.build_mau.session_timestamp: create or replace   view USER_DB_LEMUR.analytics.session_timestamp
+  
+  
+  
+  
+  as (
+    with session_timestamp as (
+    select
+        sessionId,
+        ts
+    from USER_DB_LEMUR.raw.session_timestamp
+)
+select * from session_timestamp
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.session_timestamp"} */;
+[0m21:52:22.713630 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.464 seconds
+[0m21:52:22.745186 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057dce90>]}
+[0m21:52:22.746003 [info ] [Thread-1 (]: 1 of 3 OK created sql view model analytics.session_timestamp ................... [[32mSUCCESS 1[0m in 0.52s]
+[0m21:52:22.746418 [debug] [Thread-1 (]: Finished running node model.build_mau.session_timestamp
+[0m21:52:22.746717 [debug] [Thread-1 (]: Began running node model.build_mau.user_session_channel
+[0m21:52:22.747166 [info ] [Thread-1 (]: 2 of 3 START sql view model analytics.user_session_channel ..................... [RUN]
+[0m21:52:22.747618 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.build_mau.session_timestamp, now model.build_mau.user_session_channel)
+[0m21:52:22.747885 [debug] [Thread-1 (]: Began compiling node model.build_mau.user_session_channel
+[0m21:52:22.750700 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.user_session_channel"
+[0m21:52:22.751581 [debug] [Thread-1 (]: Began executing node model.build_mau.user_session_channel
+[0m21:52:22.753584 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.user_session_channel"
+[0m21:52:22.754192 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.user_session_channel"
+[0m21:52:22.754389 [debug] [Thread-1 (]: On model.build_mau.user_session_channel: create or replace   view USER_DB_LEMUR.analytics.user_session_channel
+  
+  
+  
+  
+  as (
+    with user_session_channel as (
+    select
+        userId,
+        sessionId,
+        channel
+    from USER_DB_LEMUR.raw.user_session_channel
+)
+select * from user_session_channel
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.user_session_channel"} */;
+[0m21:52:23.063732 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.309 seconds
+[0m21:52:23.067795 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a5cff50>]}
+[0m21:52:23.068922 [info ] [Thread-1 (]: 2 of 3 OK created sql view model analytics.user_session_channel ................ [[32mSUCCESS 1[0m in 0.32s]
+[0m21:52:23.070068 [debug] [Thread-1 (]: Finished running node model.build_mau.user_session_channel
+[0m21:52:23.071168 [debug] [Thread-1 (]: Began running node model.build_mau.session_summary
+[0m21:52:23.071945 [info ] [Thread-1 (]: 3 of 3 START sql table model analytics.session_summary ......................... [RUN]
+[0m21:52:23.072834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.build_mau.user_session_channel, now model.build_mau.session_summary)
+[0m21:52:23.073355 [debug] [Thread-1 (]: Began compiling node model.build_mau.session_summary
+[0m21:52:23.081156 [debug] [Thread-1 (]: Writing injected SQL for node "model.build_mau.session_summary"
+[0m21:52:23.083815 [debug] [Thread-1 (]: Began executing node model.build_mau.session_summary
+[0m21:52:23.101750 [debug] [Thread-1 (]: Writing runtime sql for node "model.build_mau.session_summary"
+[0m21:52:23.102865 [debug] [Thread-1 (]: Using snowflake connection "model.build_mau.session_summary"
+[0m21:52:23.103087 [debug] [Thread-1 (]: On model.build_mau.session_summary: create or replace transient table USER_DB_LEMUR.analytics.session_summary
+    
+    
+    
+    as (SELECT
+  u.userId,
+  u.sessionId,
+  u.channel,
+  st.ts
+FROM USER_DB_LEMUR.analytics.user_session_channel u
+JOIN USER_DB_LEMUR.analytics.session_timestamp st
+  ON u.sessionId = st.sessionId
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.0b3", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.session_summary"} */;
+[0m21:52:26.117516 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.014 seconds
+[0m21:52:26.122143 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '985fe958-e259-4ce6-80ca-a60546da1bd7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x164415c10>]}
+[0m21:52:26.123432 [info ] [Thread-1 (]: 3 of 3 OK created sql table model analytics.session_summary .................... [[32mSUCCESS 1[0m in 3.05s]
+[0m21:52:26.124442 [debug] [Thread-1 (]: Finished running node model.build_mau.session_summary
+[0m21:52:26.126898 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:52:26.127574 [debug] [MainThread]: Connection 'model.build_mau.session_summary' was left open.
+[0m21:52:26.128203 [debug] [MainThread]: On model.build_mau.session_summary: Close
+[0m21:52:26.368658 [info ] [MainThread]: 
+[0m21:52:26.369884 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.41 seconds (5.41s).
+[0m21:52:26.371580 [debug] [MainThread]: Command end result
+[0m21:52:26.395975 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/manifest.json
+[0m21:52:26.397640 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/semantic_manifest.json
+[0m21:52:26.401892 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ritika.mac/Documents/GitHub/dbt_homework7/target/run_results.json
+[0m21:52:26.402128 [info ] [MainThread]: 
+[0m21:52:26.402376 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:52:26.402556 [info ] [MainThread]: 
+[0m21:52:26.402758 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m21:52:26.407647 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.3896337, "process_in_blocks": "0", "process_kernel_time": 1.599971, "process_mem_max_rss": "243154944", "process_out_blocks": "0", "process_user_time": 2.405611}
+[0m21:52:26.408089 [debug] [MainThread]: Command `dbt run` succeeded at 21:52:26.408034 after 6.39 seconds
+[0m21:52:26.408529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6f590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6f6e0>]}
+[0m21:52:26.408819 [debug] [MainThread]: Flushing usage events
+[0m21:52:26.775567 [debug] [MainThread]: An error was encountered while trying to flush usage events
