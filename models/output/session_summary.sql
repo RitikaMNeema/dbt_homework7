@@ -6,3 +6,4 @@ SELECT
 FROM {{ ref('user_session_channel') }} u
 JOIN {{ ref('session_timestamp') }} st
   ON u.sessionId = st.sessionId
+
